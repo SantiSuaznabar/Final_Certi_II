@@ -58,6 +58,9 @@ public class Main_PIM_Page {
 
     @FindBy(xpath = "//*[contains(text(), 'Personal Details')]")
     WebElement personalDetailsLbl;
+
+    @FindBy(xpath = "//*[@class = \"oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message\"]")
+    WebElement requiredLbl;
     public void clickDirectoryBtn(){directoryBtn.click();}
 
     public boolean verifyPIM(){return pimTop.isDisplayed();}
@@ -110,4 +113,9 @@ public class Main_PIM_Page {
         wait.until(ExpectedConditions.elementToBeClickable(personalDetailsLbl));
         return personalDetailsLbl.isDisplayed();}
 
+    public boolean verifyRequiredLbl(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(12));
+        wait.until(ExpectedConditions.elementToBeClickable(requiredLbl));
+        return requiredLbl.isDisplayed();
+    }
 }

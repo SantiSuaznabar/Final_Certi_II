@@ -3,19 +3,9 @@ package stepDefinitions;
 import Pages.Main_PIM_Page;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
-import org.monte.media.Format;
-import org.monte.media.FormatKeys;
-import org.monte.media.math.Rational;
 import org.monte.screenrecorder.ScreenRecorder;
 import utilities.DriverManager;
 
-import java.awt.*;
-import java.io.IOException;
-
-import static org.monte.media.FormatKeys.*;
-import static org.monte.media.VideoFormatKeys.*;
 
 
 public class Hooks {

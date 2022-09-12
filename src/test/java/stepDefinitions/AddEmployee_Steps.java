@@ -25,6 +25,9 @@ public class AddEmployee_Steps {
         main_pim_page.setLastNameTB(info.get(2));
     }
 
+    @DataTableType(replaceWithEmptyString = "[blank]")
+    public String stringType(String cell){return cell;}
+
     @And("I click the Save Button")
     public void clickSaveEmployeeBtn(){main_pim_page.clickSaveEmployeeBtn();}
 
@@ -32,5 +35,8 @@ public class AddEmployee_Steps {
     public void verifyDetails(){
         Assert.assertTrue(main_pim_page.verifyPersonalDetailsLbl());
     }
+
+    @Then("We Should See a Warning Label")
+    public void verifyRequiredLabel(){Assert.assertTrue(main_pim_page.verifyRequiredLbl());}
 
 }
